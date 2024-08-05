@@ -30,7 +30,7 @@ public class AmazonIPhonePurchaseTest {
         driver.get("https://www.amazon.in");
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().deleteAllCookies();
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(20));  // Increase wait time
     }
 
     @Test
@@ -54,6 +54,9 @@ public class AmazonIPhonePurchaseTest {
 
         WebElement proceedToCheckOut = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//input[@aria-labelledby='attach-sidesheet-checkout-button-announce'])[1]")));
         proceedToCheckOut.click();
+
+        // Wait for the page to load completely
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@id='ap_email_login']")));
 
         WebElement enterEmail = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='ap_email_login']")));
         enterEmail.sendKeys("vishwassv1995@gmail.com");
@@ -108,4 +111,3 @@ public class AmazonIPhonePurchaseTest {
         driver.quit();
     }
 }
-
