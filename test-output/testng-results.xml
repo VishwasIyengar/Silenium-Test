@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-08-05T17:33:08 IST" name="Default suite" finished-at="2024-08-05T17:33:44 IST" duration-ms="35693">
+  <suite started-at="2024-08-05T17:48:05 IST" name="Default suite" finished-at="2024-08-05T17:49:07 IST" duration-ms="61700">
     <groups>
     </groups>
-    <test started-at="2024-08-05T17:33:08 IST" name="Default test" finished-at="2024-08-05T17:33:44 IST" duration-ms="35693">
+    <test started-at="2024-08-05T17:48:05 IST" name="Default test" finished-at="2024-08-05T17:49:07 IST" duration-ms="61700">
       <class name="AutomationRestAPI.SeleniumAutomationRestAPI.BrowserWindowsTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:AutomationRestAPI.SeleniumAutomationRestAPI.BrowserWindowsTest@2ab4bc72]" started-at="2024-08-05T17:33:08 IST" name="setUp" finished-at="2024-08-05T17:33:37 IST" duration-ms="29350" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:AutomationRestAPI.SeleniumAutomationRestAPI.BrowserWindowsTest@2ab4bc72]" started-at="2024-08-05T17:48:05 IST" name="setUp" finished-at="2024-08-05T17:49:00 IST" duration-ms="55397" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testNewTab()[pri:0, instance:AutomationRestAPI.SeleniumAutomationRestAPI.BrowserWindowsTest@2ab4bc72]" started-at="2024-08-05T17:33:37 IST" name="testNewTab" finished-at="2024-08-05T17:33:43 IST" duration-ms="5529" status="PASS">
+        <test-method signature="testNewTab()[pri:0, instance:AutomationRestAPI.SeleniumAutomationRestAPI.BrowserWindowsTest@2ab4bc72]" started-at="2024-08-05T17:49:00 IST" name="testNewTab" finished-at="2024-08-05T17:49:06 IST" duration-ms="5522" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testNewTab -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:AutomationRestAPI.SeleniumAutomationRestAPI.BrowserWindowsTest@2ab4bc72]" started-at="2024-08-05T17:33:43 IST" name="tearDown" finished-at="2024-08-05T17:33:44 IST" duration-ms="741" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:AutomationRestAPI.SeleniumAutomationRestAPI.BrowserWindowsTest@2ab4bc72]" started-at="2024-08-05T17:49:06 IST" name="tearDown" finished-at="2024-08-05T17:49:07 IST" duration-ms="705" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

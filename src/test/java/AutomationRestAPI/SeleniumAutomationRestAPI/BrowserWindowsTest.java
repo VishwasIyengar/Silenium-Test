@@ -22,7 +22,8 @@ public class BrowserWindowsTest {
 
     @BeforeClass
     public void setUp() {
-    	System.setProperty("webdriver.chrome.driver", "C:\\Users\\Hp\\Downloads\\chromedriver-win64\\chromedriver.exe");
+        // Set the path to chromedriver executable
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Hp\\Downloads\\chromedriver-win64\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://demoqa.com/browser-windows");
@@ -33,8 +34,8 @@ public class BrowserWindowsTest {
     public void testNewTab() throws InterruptedException {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
-        // Click on the "New Tab" button
-        WebElement newTabButton = driver.findElement(By.id("tabButton"));
+        // Click on the "New Tab" button when it is clickable
+        WebElement newTabButton = wait.until(ExpectedConditions.elementToBeClickable(By.id("tabButton")));
         newTabButton.click();
 
         // Switch to the new tab
