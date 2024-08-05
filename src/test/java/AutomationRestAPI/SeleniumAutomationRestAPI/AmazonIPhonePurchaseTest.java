@@ -25,7 +25,7 @@ public class AmazonIPhonePurchaseTest
     public void setUp() 
     {
         // Set up WebDriver
-    	System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\OneDrive\\Desktop\\Selenium3\\chromedriver-win64\\chromedriver.exe");
+    	System.setProperty("webdriver.chrome.driver", "C:\\Users\\Hp\\Downloads\\chromedriver-win64\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://www.amazon.in");
@@ -61,16 +61,16 @@ public class AmazonIPhonePurchaseTest
         WebElement proceedToCheckOut = driver.findElement(By.xpath("(//input[@aria-labelledby='attach-sidesheet-checkout-button-announce'])[1]"));
         proceedToCheckOut.click();
         
-        WebElement enterEmail = driver.findElement(By.xpath("(//input[@id='ap_email'])[1]"));
+        WebElement enterEmail = driver.findElement(By.xpath("//input[@id='ap_email_login']"));
         enterEmail.sendKeys("vishwassv1995@gmail.com");
         
-        WebElement continueButton = driver.findElement(By.xpath("(//input[@id='continue'])[1]"));
+        WebElement continueButton = driver.findElement(By.xpath("//input[@type='submit']"));
         continueButton.click();
         
-        WebElement enterPassword = driver.findElement(By.xpath("(//input[@id='ap_password'])[1]"));
+        WebElement enterPassword = driver.findElement(By.xpath("//input[@id='ap_password']"));
         enterPassword.sendKeys("Vishu@2024");
         
-        WebElement signInButton = driver.findElement(By.xpath("(//input[@id='signInSubmit'])[1]"));
+        WebElement signInButton = driver.findElement(By.xpath("//input[@id='signInSubmit']"));
         signInButton.click();
         
         WebElement fullNameInput = driver.findElement(By.xpath("(//input[@id='address-ui-widgets-enterAddressFullName'])[1]"));

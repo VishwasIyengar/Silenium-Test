@@ -19,7 +19,7 @@ public class BrowserWindowsTest
     public void setUp() 
     {
         // Set the path to chromedriver executable
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\OneDrive\\Desktop\\Selenium3\\chromedriver-win64\\chromedriver.exe");
+    	System.setProperty("webdriver.chrome.driver", "C:\\Users\\Hp\\Downloads\\chromedriver-win64\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.get("https://demoqa.com/browser-windows");
         mainWindowHandle = driver.getWindowHandle();
