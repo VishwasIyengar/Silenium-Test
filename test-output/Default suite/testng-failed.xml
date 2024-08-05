@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="AutomationRestAPI.SeleniumAutomationRestAPI.AmazonIPhonePurchaseTest">
+      <class name="AutomationRestAPI.SeleniumAutomationRestAPI.BrowserWindowsTest">
         <methods>
-          <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="testIPhonePurchase"/>
+          <include name="tearDown"/>
+          <include name="testNewTab"/>
         </methods>
-      </class> <!-- AutomationRestAPI.SeleniumAutomationRestAPI.AmazonIPhonePurchaseTest -->
+      </class> <!-- AutomationRestAPI.SeleniumAutomationRestAPI.BrowserWindowsTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
