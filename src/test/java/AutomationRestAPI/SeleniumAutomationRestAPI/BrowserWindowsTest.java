@@ -1,6 +1,6 @@
 package AutomationRestAPI.SeleniumAutomationRestAPI;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+ 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -22,7 +22,7 @@ public class BrowserWindowsTest {
 
     @BeforeClass
     public void setUp() {
-        WebDriverManager.chromedriver().setup();
+    	System.setProperty("webdriver.chrome.driver", "C:\\Users\\Hp\\Downloads\\chromedriver-win64\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://demoqa.com/browser-windows");
