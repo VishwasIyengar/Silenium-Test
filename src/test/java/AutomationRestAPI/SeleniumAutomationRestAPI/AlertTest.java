@@ -2,6 +2,7 @@ package AutomationRestAPI.SeleniumAutomationRestAPI;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -13,32 +14,35 @@ import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
 
-import java.time.Duration; 
+import java.time.Duration;
 
-public class AlertTest 
-{
+public class AlertTest {
 
-     WebDriver driver;
+    WebDriver driver;
 
     @BeforeTest
-    public void setUp() 
-    {
+    public void setUp() {
         // Set the path to chromedriver executable
-    	System.setProperty("webdriver.chrome.driver", "C:\\Users\\Hp\\Downloads\\chromedriver-win64\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Hp\\Downloads\\chromedriver-win64\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://demoqa.com/alerts");
     }
+
     @Test
     public void automateAlert() throws InterruptedException {
         // Locate the button to trigger a simple alert
         WebElement clickMeButton = driver.findElement(By.id("alertButton"));
 
-        // Click the button to generate the alert
-        clickMeButton.click();
+        // Use WebDriverWait for expected conditions (element to be clickable)
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(clickMeButton));
 
-        // Use WebDriverWait for expected conditions (alert presence)
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5)); // Set a timeout of 5 seconds
+        // Use JavascriptExecutor to click the button
+        JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+        jsExecutor.executeScript("arguments[0].click();", clickMeButton);
+
+        // Wait for the alert to be present
         Alert alert = wait.until(ExpectedConditions.alertIsPresent());
 
         // Get the text from the alert
@@ -49,13 +53,12 @@ public class AlertTest
 
         // Accept the alert (similar for dismiss)
         alert.accept();
-        
-        Thread.sleep(3000);
+
+        Thread.sleep(3000); // Sleep to observe the result
     }
 
     @AfterTest
-    public void tearDown() 
-    {
+    public void tearDown() {
         // Close the browser
         driver.quit();
     }

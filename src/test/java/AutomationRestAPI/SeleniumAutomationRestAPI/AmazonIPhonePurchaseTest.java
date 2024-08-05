@@ -55,7 +55,7 @@ public class AmazonIPhonePurchaseTest
         System.out.println(ar.get(1));
         driver.switchTo().window((String)ar.get(1));
         
-        WebElement addCard = driver.findElement(By.xpath("(//input[@id='add-to-cart-button'])[2]"));
+        WebElement addCard = driver.findElement(By.xpath("//div[@class='a-section a-spacing-none a-padding-none']//input[@id='add-to-cart-button']"));
         addCard.click();
         
         WebElement proceedToCheckOut = driver.findElement(By.xpath("(//input[@aria-labelledby='attach-sidesheet-checkout-button-announce'])[1]"));

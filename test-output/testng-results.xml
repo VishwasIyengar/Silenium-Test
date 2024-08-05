@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-08-05T12:47:49 IST" name="Default suite" finished-at="2024-08-05T12:48:40 IST" duration-ms="50493">
+  <suite started-at="2024-08-05T14:06:55 IST" name="Default suite" finished-at="2024-08-05T14:07:12 IST" duration-ms="16652">
     <groups>
     </groups>
-    <test started-at="2024-08-05T12:47:49 IST" name="Default test" finished-at="2024-08-05T12:48:40 IST" duration-ms="50493">
-      <class name="AutomationRestAPI.SeleniumAutomationRestAPI.BrowserWindowsTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:AutomationRestAPI.SeleniumAutomationRestAPI.BrowserWindowsTest@24569dba]" started-at="2024-08-05T12:47:49 IST" name="setUp" finished-at="2024-08-05T12:48:34 IST" duration-ms="44509" status="PASS">
+    <test started-at="2024-08-05T14:06:55 IST" name="Default test" finished-at="2024-08-05T14:07:12 IST" duration-ms="16652">
+      <class name="AutomationRestAPI.SeleniumAutomationRestAPI.AlertTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:AutomationRestAPI.SeleniumAutomationRestAPI.AlertTest@2ab4bc72]" started-at="2024-08-05T14:06:55 IST" name="setUp" finished-at="2024-08-05T14:07:08 IST" duration-ms="12895" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testNewTab()[pri:0, instance:AutomationRestAPI.SeleniumAutomationRestAPI.BrowserWindowsTest@24569dba]" started-at="2024-08-05T12:48:34 IST" name="testNewTab" finished-at="2024-08-05T12:48:39 IST" duration-ms="5392" status="PASS">
+        <test-method signature="automateAlert()[pri:0, instance:AutomationRestAPI.SeleniumAutomationRestAPI.AlertTest@2ab4bc72]" started-at="2024-08-05T14:07:08 IST" name="automateAlert" finished-at="2024-08-05T14:07:11 IST" duration-ms="3164" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testNewTab -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:AutomationRestAPI.SeleniumAutomationRestAPI.BrowserWindowsTest@24569dba]" started-at="2024-08-05T12:48:39 IST" name="tearDown" finished-at="2024-08-05T12:48:40 IST" duration-ms="506" status="PASS">
+        </test-method> <!-- automateAlert -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:AutomationRestAPI.SeleniumAutomationRestAPI.AlertTest@2ab4bc72]" started-at="2024-08-05T14:07:11 IST" name="tearDown" finished-at="2024-08-05T14:07:12 IST" duration-ms="504" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- AutomationRestAPI.SeleniumAutomationRestAPI.BrowserWindowsTest -->
+      </class> <!-- AutomationRestAPI.SeleniumAutomationRestAPI.AlertTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
