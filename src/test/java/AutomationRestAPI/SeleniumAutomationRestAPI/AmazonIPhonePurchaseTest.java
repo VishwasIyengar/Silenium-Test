@@ -1,7 +1,10 @@
 package AutomationRestAPI.SeleniumAutomationRestAPI;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -11,6 +14,8 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Set;
@@ -34,7 +39,8 @@ public class AmazonIPhonePurchaseTest {
     }
 
     @Test
-    public void testIPhonePurchase() throws InterruptedException {
+    public void testIPhonePurchase() throws InterruptedException, IOException {
+        try {
         // Search for iPhone
         WebElement searchBox = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='twotabsearchtextbox']")));
         searchBox.sendKeys("iPhone");
@@ -58,8 +64,15 @@ public class AmazonIPhonePurchaseTest {
         // Wait for the page to load completely
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@id='ap_email_login']")));
 
-        WebElement enterEmail = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='ap_email_login']")));
-        enterEmail.sendKeys("vishwassv1995@gmail.com");
+        
+                // ... your test steps ...
+
+                WebElement enterEmail = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='ap_email_login']")));
+                enterEmail.sendKeys("vishwassv1995@gmail.com");
+
+                // ... other steps ...
+           
+
 
         WebElement continueButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@type='submit']")));
         continueButton.click();
@@ -104,7 +117,15 @@ public class AmazonIPhonePurchaseTest {
         }
 
         Thread.sleep(5000);
+        } catch (Exception e) {
+            System.out.println(driver.getPageSource());  // Print page source for debugging
+            File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+            FileUtils.copyFile(screenshot, new File("error_screenshot.png"));  // Save screenshot
+            throw e;  // Re-throw the exception to ensure test fails
+        }
     }
+    
+        
 
     @AfterClass
     public void tearDown() {
