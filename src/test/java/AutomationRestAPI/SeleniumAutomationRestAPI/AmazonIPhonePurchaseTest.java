@@ -56,7 +56,7 @@ public class AmazonIPhonePurchaseTest {
         proceedToCheckOut.click();
 
         try {
-            WebElement enterEmail = driver.findElement(By.xpath("(//input[@id='ap_email_login'])[1]"));
+            WebElement enterEmail = driver.findElement(By.xpath("//input[@id='ap_email_login']"));
             if (enterEmail.isDisplayed()) {
                 enterEmail.sendKeys("vishwassv1995@gmail.com");
 

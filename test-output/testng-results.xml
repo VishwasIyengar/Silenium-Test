@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-08-05T18:50:43 IST" name="Default suite" finished-at="2024-08-05T18:51:18 IST" duration-ms="35198">
+  <suite started-at="2024-08-05T19:13:13 IST" name="Default suite" finished-at="2024-08-05T19:14:00 IST" duration-ms="47858">
     <groups>
     </groups>
-    <test started-at="2024-08-05T18:50:43 IST" name="Default test" finished-at="2024-08-05T18:51:18 IST" duration-ms="35198">
+    <test started-at="2024-08-05T19:13:13 IST" name="Default test" finished-at="2024-08-05T19:14:00 IST" duration-ms="47858">
       <class name="AutomationRestAPI.SeleniumAutomationRestAPI.AmazonIPhonePurchaseTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:AutomationRestAPI.SeleniumAutomationRestAPI.AmazonIPhonePurchaseTest@239a307b]" started-at="2024-08-05T18:50:43 IST" name="setUp" finished-at="2024-08-05T18:50:48 IST" duration-ms="5526" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:AutomationRestAPI.SeleniumAutomationRestAPI.AmazonIPhonePurchaseTest@239a307b]" started-at="2024-08-05T19:13:13 IST" name="setUp" finished-at="2024-08-05T19:13:18 IST" duration-ms="5420" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testIPhonePurchase()[pri:0, instance:AutomationRestAPI.SeleniumAutomationRestAPI.AmazonIPhonePurchaseTest@239a307b]" started-at="2024-08-05T18:50:48 IST" name="testIPhonePurchase" finished-at="2024-08-05T18:51:17 IST" duration-ms="29041" status="PASS">
+        <test-method signature="testIPhonePurchase()[pri:0, instance:AutomationRestAPI.SeleniumAutomationRestAPI.AmazonIPhonePurchaseTest@239a307b]" started-at="2024-08-05T19:13:18 IST" name="testIPhonePurchase" finished-at="2024-08-05T19:14:00 IST" duration-ms="41987" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testIPhonePurchase -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:AutomationRestAPI.SeleniumAutomationRestAPI.AmazonIPhonePurchaseTest@239a307b]" started-at="2024-08-05T18:51:17 IST" name="tearDown" finished-at="2024-08-05T18:51:18 IST" duration-ms="558" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:AutomationRestAPI.SeleniumAutomationRestAPI.AmazonIPhonePurchaseTest@239a307b]" started-at="2024-08-05T19:14:00 IST" name="tearDown" finished-at="2024-08-05T19:14:00 IST" duration-ms="382" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
